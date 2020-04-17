@@ -365,7 +365,7 @@ func setupSkaffoldWithArgs(t *testing.T, args ...string) func() {
 }
 
 func randomPort() string {
-	return fmt.Sprintf("%d", rand.Intn(65535))
+	return strconv.Itoa(rand.Intn(65535))
 }
 
 func checkBuildAndDeployComplete(state proto.State) bool {
